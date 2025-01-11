@@ -1,13 +1,15 @@
 package net.zapp;
 
-import org.getspout.spoutapi.block.design.GenericCubeBlockDesign;
+import org.getspout.spoutapi.block.design.GenericCuboidBlockDesign;
 import org.getspout.spoutapi.block.design.Texture;
-import org.getspout.spoutapi.material.block.GenericCubeCustomBlock;
+import org.getspout.spoutapi.material.block.GenericCuboidCustomBlock;
 
-public class ExampleBlock extends GenericCubeCustomBlock {
-    static Texture texture = new Texture(Main.get(), "https://i.ibb.co/sCFvQBD/q6wBozz.png", 32, 16, 16);
+import static net.zapp.Main.GIT_ASSETS;
+
+public class ExampleBlock extends GenericCuboidCustomBlock {
+    static Texture texture = new Texture(Main.get(), GIT_ASSETS + "texture_test.png", 4, 4, 16);
     public ExampleBlock() {
-        super(Main.get(), "exampleblock", new GenericCubeBlockDesign(Main.get(), texture, 0));
+        super( Main.get(), "exampleblock", 85, (GenericCuboidBlockDesign) new GenericCuboidBlockDesign(Main.get(), texture, 0, (float) 0.3125, (float) 0.6875, (float) 0.3125, (float) 0.6875, (float) 0.3125, (float) 0.6875).setRenderPass(1));
         setName("Example Block");
     }
 }

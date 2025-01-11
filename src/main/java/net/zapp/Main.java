@@ -6,6 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin {
 
     private static Main INSTANCE;
+    public static String GIT_ASSETS = "https://raw.githubusercontent.com/Mirroray41/spoutcraft-test-plugin/refs/heads/main/src/main/resources/assets/";
 
     public Main() {
         INSTANCE = this;
